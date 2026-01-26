@@ -49,10 +49,10 @@ with open(f"ids_todo_{worker}.txt", 'r') as fin, open(f"releases_have_want_{work
                 fout.write(f"{release_id}\t{release.have}\t{release.want}\n")
                 fout.flush()
             except ValueError:
-                fout.write(f"{release_id}\t0\t0\n")
+                fout.write(f"{release_id}\t-1\t-1\n")
                 fout.flush()
             except discogs_client.exceptions.HTTPError:
-                fout.write(f"{release_id}\t0\t0\n")
+                fout.write(f"{release_id}\t-1\t-1\n")
                 fout.flush()
             except requests.exceptions.ConnectionError:
                 time.sleep(10)
