@@ -3,7 +3,7 @@ import pandas as pd
 from lxml import etree
 from datetime import datetime
 
-worker = open("worker.txt", 'r').read().strip()     
+worker = open("worker_name.txt", 'r').read().strip()     
 
 def print_current_datetime():
     now = datetime.now()

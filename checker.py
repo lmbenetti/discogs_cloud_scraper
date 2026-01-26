@@ -10,7 +10,7 @@ def read_and_update_value(path, new_value):
         f.write(str(new_value))
     return int(old_value)
 
-worker = open("worker.txt", 'r').read().strip()     
+worker = open("worker_name.txt", 'r').read().strip()     
 extracted = count_lines(f"releases_have_want_{worker}.tsv")
 last = read_and_update_value("last.txt", extracted)
 total = extracted - last
