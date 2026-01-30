@@ -55,6 +55,8 @@ with open(f"ids_todo_{worker}.txt", 'r') as fin, open(f"releases_have_want_{work
                 fout.write(f"{release_id}\t-1\t-1\n")
                 fout.flush()
             except requests.exceptions.ConnectionError:
+                fout.write(f"{release_id}\t-1\t-1\n")
+                fout.flush()
                 time.sleep(10)
                 continue
             time.sleep(1)
