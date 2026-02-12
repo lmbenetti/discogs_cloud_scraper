@@ -30,9 +30,9 @@ except Exception as e:
     print("Not connected:", e)
     
 
-already_done = set(pd.read_csv(f"releases_have_want_{worker}.tsv", sep = '\t')["release"])
+already_done = set(pd.read_csv(f"releases_have_want_minus_{worker}.tsv", sep = '\t')["release"])
 last_printed_pct = -1.0
-with open(f"ids_todo_{worker}.txt", 'r') as fin, open(f"releases_have_want_{worker}.tsv", 'a') as fout:
+with open(f"ids_todo_{worker}.txt", 'r') as fin, open(f"releases_have_want_minus_{worker}.tsv", 'a') as fout:
     for line in fin:
         count += 1
         
