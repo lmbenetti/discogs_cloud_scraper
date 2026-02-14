@@ -55,7 +55,7 @@ with open(f"ids_todo_{worker}.txt", 'r') as fin, open(f"releases_have_want_minus
                 fout.write(f"{release_id}\t-2\t-2\n")
                 fout.flush()
             except requests.exceptions.ConnectionError:
-                fout.write(f"{release_id}\ßt-3\t-3\n")
+                fout.write(f"{release_id}\t-3\t-3\n")
                 fout.flush()
                 time.sleep(10)
                 continue

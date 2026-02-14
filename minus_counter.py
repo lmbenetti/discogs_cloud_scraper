@@ -9,15 +9,19 @@ def count_minus_one_rows(filename):
             parts = line.strip().split("\t")
             if len(parts) >= 3 and parts[1] == "-1" and parts[2] == "-1":
                 minus_one += 1
+            elif len(parts) >= 3 and parts[1] == "-2" and parts[2] == "-2":
+                minus_one += 1
+            elif len(parts) >= 3 and parts[1] == "-3" and parts[2] == "-3":
+                minus_one += 1
 
     percentage = (minus_one / total * 100) if total > 0 else 0.0
 
     print(f"Total rows: {total}")
-    print(f"-1/-1 rows: {minus_one}")
+    print(f"Not extracted rows: {minus_one}")
     print(f"Percentage: {percentage:.2f}%")
 
     return minus_one, percentage
 
 
 # usage
-count_minus_one_rows("releases_have_want_total.tsv")
+count_minus_one_rows("/Users/licho/Documents/daniel_ids/releases_have_want_total.tsv")
