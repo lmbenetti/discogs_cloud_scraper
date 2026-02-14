@@ -24,4 +24,4 @@ def count_minus_one_rows(filename):
 
 
 # usage
-count_minus_one_rows("/Users/licho/Documents/daniel_ids/releases_have_want_total.tsv")
+count_minus_one_rows("/Users/licho/Documents/daniel_ids/releases_have_want_worker5.tsv")

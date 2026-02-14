@@ -34,4 +34,4 @@ def remove_negative_rows(input_file):
     print(f"Removed {removed} rows.")
     print(f"Kept {kept} rows.")
 
-remove_negative_rows("/Users/licho/Documents/daniel_ids/releases_have_want_total.tsv")
+remove_negative_rows("/Users/licho/Documents/daniel_ids/releases_have_want_worker5.tsv")
