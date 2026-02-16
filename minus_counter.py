@@ -22,6 +22,6 @@ def count_minus_one_rows(filename):
 
     return minus_one, percentage
 
-
+worker = open("worker_name.txt", 'r').read().strip()   
 # usage
-count_minus_one_rows("/Users/licho/Documents/daniel_ids/releases_have_want_worker5.tsv")
+count_minus_one_rows(f"releases_have_want_{worker}.tsv")

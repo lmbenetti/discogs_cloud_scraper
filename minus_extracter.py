@@ -20,7 +20,6 @@ def create_redo_file(input_tsv, output_txt="ids_toredo.txt"):
             elif have == "-3" and want == "-3":
                 redo_ids.append(release_id)
 
-    # Optional: remove duplicates (safe guard)
     redo_ids = list(set(redo_ids))
 
     # Write to output file
@@ -31,6 +30,5 @@ def create_redo_file(input_tsv, output_txt="ids_toredo.txt"):
     print(f"Created '{output_txt}'")
     print(f"Total IDs to redo: {len(redo_ids)}")
 
-
-# Example usage
-create_redo_file("/Users/licho/Documents/daniel_ids/releases_have_want_worker5.tsv")
+worker = open("worker_name.txt", 'r').read().strip()   
+create_redo_file(f"releases_have_want_{worker}.tsv")

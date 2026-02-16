@@ -8,15 +8,12 @@ def reset_scraper():
     ]
 
     deleted = 0
-
-    # 1️⃣ Delete fixed files
     for filename in files_to_delete:
         if os.path.exists(filename):
             os.remove(filename)
             print(f"Deleted {filename}")
             deleted += 1
 
-    # 2️⃣ Delete releases_have_want_*.tsv files
     for filepath in glob.glob("releases_have_want_*.tsv"):
         os.remove(filepath)
         print(f"Deleted {filepath}")
