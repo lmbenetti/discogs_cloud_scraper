@@ -31,4 +31,4 @@ def create_redo_file(input_tsv, output_txt="ids_toredo.txt"):
     print(f"Total IDs to redo: {len(redo_ids)}")
 
 # worker = open("worker_name.txt", 'r').read().strip()   
-create_redo_file(f"releases_have_want.tsv")
+create_redo_file(f"redone.tsv")
