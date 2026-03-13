@@ -35,4 +35,4 @@ def remove_negative_rows(input_file):
     print(f"Kept {kept} rows.")
 
 # worker = "worker3" #open("worker_name.txt", 'r').read().strip()   
-remove_negative_rows(f"redone.tsv")
+remove_negative_rows(f"releases_have_want_worker1.tsv")

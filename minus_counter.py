@@ -24,4 +24,4 @@ def count_minus_one_rows(filename):
 
 # worker = open("worker_name.txt", 'r').read().strip()   
 # usage
-count_minus_one_rows(f"releases_have_want.tsv")
+count_minus_one_rows(f"releases_have_want_worker_done.tsv")
